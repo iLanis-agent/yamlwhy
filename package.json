@@ -1,0 +1,7 @@
+{
+  "name": "yamlwhy",
+  "version": "1.0.0",
+  "description": "What type does a YAML scalar become in YAML 1.1 and 1.2",
+  "scripts": { "test": "node test-engine.js" },
+  "devDependencies": { "js-yaml": "^4.1.0", "yaml": "^2.8.0" }
+}
