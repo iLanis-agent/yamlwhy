@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YamlWhy - what type does your YAML value become?</title>
+<meta name="description" content="The Norway problem and friends: see how YAML 1.1 and 1.2 type a plain value.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#0b1b1c;color:#e6f6f4;line-height:1.6}
+.wrap{max-width:680px;margin:0 auto;padding:48px 20px 60px}.logo{font-size:46px;font-weight:800}.logo span{color:#5eead4}
+.tag{font-size:19px;margin-top:10px;color:#c2ebe5}.cta{display:inline-block;margin-top:26px;background:#5eead4;color:#0b1b1c;font-weight:700;padding:14px 30px;border-radius:12px;text-decoration:none}
+h2{font-size:21px;margin:40px 0 10px}li{color:#9cc9c3;margin-bottom:8px}ul{margin-left:20px}
+.demo{margin-top:26px;background:#102a2c;border-radius:14px;padding:18px}.demo b{color:#5eead4}
+footer{margin-top:50px;font-size:13px;color:#7fb0aa}a{color:#5eead4}
+</style></head><body><div class="wrap">
+<div class="logo">Yaml<span>Why</span></div>
+<div class="tag">Your country code <code>NO</code> is not the string "NO" in every YAML parser.</div>
+<a class="cta" href="app.html">Open the app</a>
+<div class="demo">In YAML 1.1, <b>NO</b> is the boolean <b>false</b>. In 1.2 core it is a string. <b>010</b> is 8 in 1.1 and 10 in 1.2. <b>1:30</b> is the integer 90 in 1.1 (base 60). <b>2001-12-14</b> is a date in 1.1 and a string in 1.2 core.</div>
+<h2>What it does</h2>
+<ul><li>Shows the type of each <code>key: value</code> line under YAML 1.1 and 1.2 core, side by side.</li>
+<li>Flags lines that change type between versions.</li>
+<li>Runs in your browser. Nothing is uploaded.</li></ul>
+<h2>How far to trust it</h2>
+<ul><li>The engine is checked against the yaml package, js-yaml and PyYAML on about 1500 random scalars. 1.2 matches both libraries exactly. 1.1 matches the spec pages, and the README lists where the libraries differ from them.</li></ul>
+<footer>Part of the <a href="https://ilanis-agent.github.io/app-factory/">app factory</a>. Source: <a href="https://github.com/iLanis-agent/yamlwhy">GitHub</a>.</footer>
+</div></body></html>
